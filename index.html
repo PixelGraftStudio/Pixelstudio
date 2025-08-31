@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PixelGraftStudio — Diseño web que vende</title>
+
+  <!-- SEO -->
+  <meta name="description" content="PixelGraftStudio crea páginas web rápidas, atractivas y optimizadas para convertir visitas en clientes. Diseño moderno, SEO técnico y copy persuasivo.">
+  <meta name="author" content="PixelGraftStudio">
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="canonical" href="https://tudominio.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="PixelGraftStudio — Diseño web que vende" />
+  <meta property="og:description" content="Webs rápidas, bonitas y optimizadas para aumentar ventas. SEO, copywriting y entrega exprés." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tudominio.com" />
+  <meta property="og:image" content="https://tudominio.com/preview.jpg" />
+  <meta property="og:locale" content="es_ES" />
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"PixelGraftStudio",
+    "image":"https://tudominio.com/logo.png",
+    "description":"Diseño web rápido, moderno y optimizado para ventas.",
+    "telephone":"+34 623 45 28 87",
+    "email":"graftstudioweb@gmail.com",
+    "url":"https://tudominio.com"
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    .portfolio img {
+  width: 100%;
+  max-width: 250px;   /* más estrechas */
+  height: 150px;      /* más bajas */
+  object-fit: cover;  /* recorta sin deformar */
+  border-radius: var(--radius);
+  border: 1px solid #1f2937;
+  transition: transform .3s, box-shadow .3s;
+}
+
+    :root{
+      --bg:#0b1220; --card:#0f172a; --muted:#94a3b8; --txt:#e5e7eb;
+      --brand:#7c3aed; --brand-2:#06b6d4; --accent:#f59e0b;
+      --radius:18px; --max:1200px
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{font-family:Inter,system-ui,sans-serif;background:linear-gradient(180deg,#0b1220,#0d1526);color:var(--txt)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .container{max-width:var(--max);margin:auto;padding:0 20px}
+
+    /* Buttons */
+    .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 1.2rem;border-radius:14px;
+      background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff;font-weight:800;cursor:pointer;transition:.2s transform,.2s box-shadow}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(6,182,212,.18)}
+    .btn.outline{background:transparent;border:1px solid #334155}
+    .btn.ghost{background:transparent;border:1px dashed #334155}
+
+    /* Header */
+    header{position:sticky;top:0;background:rgba(11,18,32,.7);backdrop-filter:blur(10px);border-bottom:1px solid #1f2937;z-index:10}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo img{height:36px;width:auto;border-radius:8px}
+    .tagline{font-size:12px;color:var(--muted)}
+
+    /* Hero */
+    .hero{padding:72px 0;display:grid;gap:30px;grid-template-columns:1fr 1fr;align-items:center}
+    .headline{font-weight:900;font-size:clamp(32px,4.5vw,56px);line-height:1.1;
+      background:linear-gradient(90deg,#e5e7eb,#89f0ff,#e5e7eb);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .sub{margin-top:10px;color:var(--muted)}
+    .stack{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+    .pill{border:1px solid #334155;border-radius:999px;padding:6px 10px;color:#cbd5e1;font-size:12px}
+    .hero-img{max-width:320px;margin:auto;display:block}
+
+    /* Sections */
+    section{padding:70px 0}
+    .cards{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .card{background:var(--card);padding:20px;border:1px solid #1f2937;border-radius:var(--radius);box-shadow:0 8px 28px rgba(0,0,0,.25)}
+    .card:hover{box-shadow:0 14px 40px rgba(0,0,0,.33)}
+    .portfolio img{border-radius:var(--radius);border:1px solid #1f2937;transition:transform .3s, box-shadow .3s}
+    .portfolio img:hover{transform:scale(1.05);box-shadow:0 10px 28px rgba(6,182,212,.25)}
+    .testimonial{font-style:italic;color:#cbd5e1}
+
+    /* Prices */
+    .price{font-size:28px;font-weight:900;margin:10px 0}
+
+    /* Form card */
+    .form-card{background:linear-gradient(180deg,#0f172a,#0c1322);border:1px solid #1f2937;border-radius:22px;
+      padding:22px;box-shadow:0 18px 60px rgba(0,0,0,.35)}
+    .input{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #334155;background:#0b1220;color:#e5e7eb}
+    .input:focus{outline:none;border-color:#06b6d4;box-shadow:0 0 0 3px rgba(6,182,212,.25)}
+
+    /* Footer */
+    .footer{border-top:1px solid #1f2937;padding:22px 0;text-align:center;font-size:14px;color:var(--muted)}
+
+    /* Cookies + FAB */
+    .cookie-banner{position:fixed;left:0;right:0;bottom:0;background:rgba(0,0,0,.85);color:#fff;padding:15px;
+      display:none;justify-content:space-between;align-items:center;gap:12px;font-size:14px;z-index:1000}
+    .cookie-banner button{background:#22c55e;border:none;color:#fff;padding:8px 16px;border-radius:8px;cursor:pointer;font-weight:bold}
+    .fab-wa{position:fixed;right:16px;bottom:16px;display:grid;place-items:center;width:52px;height:52px;border-radius:999px;background:#22c55e;color:#052e16;box-shadow:0 10px 30px rgba(34,197,94,.4);font-size:22px;z-index:950;transition:bottom .3s}
+    body.cookies-open .fab-wa{bottom:84px}
+
+    @media (max-width:900px){ .hero{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <img src="img/logo.png" alt="PixelGraftStudio">
+        <div>
+          <strong>PixelGraftStudio</strong>
+          <div class="tagline">Webs que venden</div>
+        </div>
+      </div>
+      <a class="btn outline" href="tel:+34623452887">📞 Llamar</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="container hero">
+      <div>
+        <h1 class="headline">Convierte tu web en una máquina de ventas 🚀</h1>
+        <p class="sub">Páginas rápidas, bonitas y optimizadas para transformar visitas en clientes. Sin esperas eternas, sin complicaciones.</p>
+        <div class="stack">
+          <a class="btn" data-wa target="_blank" rel="noopener">🟢 WhatsApp</a>
+          <a class="btn outline" id="emailCTA" target="_blank" rel="noopener">✉️ Email</a>
+        </div>
+        <div class="stack" style="margin-top:10px">
+          <span class="pill">Diseño moderno</span><span class="pill">SEO incluido</span><span class="pill">Entrega exprés</span>
+        </div>
+      </div>
+      <div>
+        <img src="img/logo.png" alt="Diseño web PixelGraftStudio" class="hero-img">
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="container" id="portfolio">
+      <h2 style="margin-bottom:28px">Proyectos recientes</h2>
+      <div class="cards portfolio">
+        <a href="https://lexsaxasesoria.es" target="_blank" rel="noopener">
+          <img src="img/lexsax.png" alt="Lexsax Asesoría Integral & Abogados">
+        </a>
+        <a href="https://pixelgraftstudio.github.io/botigadesalud.github.io/" target="_blank" rel="noopener">
+          <img src="img/botigadesalud.png" alt="Botiga de Salud - Herboristería">
+        </a>
+        <a href="#" target="_blank" rel="noopener">
+          <img src="img/proyecto.png" alt="Proyecto en curso">
+        </a>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="container">
+      <h2 style="margin-bottom:14px">Clientes felices</h2>
+      <div class="cards">
+        <div class="card testimonial">“PixelGraftStudio nos hizo una web rápida y moderna. Hemos duplicado clientes en 3 meses.” — Laura M.</div>
+        <div class="card testimonial">“La mejor inversión: la web no solo es bonita, también vende.” — David R.</div>
+      </div>
+    </section>
+
+    <!-- PRECIOS -->
+    <section class="container">
+      <h2 style="margin-bottom:14px">Planes</h2>
+      <div class="cards">
+        <div class="card">
+          <strong>Landing Básica</strong><div class="price">249€</div>
+          <p class="sub">1 página, responsive, WhatsApp.</p>
+          <a class="btn" data-wa target="_blank">Contratar</a>
+        </div>
+        <div class="card" style="border:2px solid #334155">
+          <div class="pill" style="display:inline-block;margin-bottom:8px">Más vendido</div>
+          <strong>Negocio</strong><div class="price">549€</div>
+          <p class="sub">Hasta 6 páginas, blog y SEO.</p>
+          <a class="btn" data-wa target="_blank">Contratar</a>
+        </div>
+        <div class="card">
+          <strong>Tienda Online</strong><div class="price">1900€</div>
+          <p class="sub">Catálogo hasta 50 productos, pagos y envíos.</p>
+          <a class="btn" data-wa target="_blank">Contratar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="container" id="contacto">
+      <h2 style="margin-bottom:14px">Contacto rápido</h2>
+      <div class="form-card">
+        <form id="contactForm" style="display:grid;gap:12px">
+          <input class="input" id="fName" placeholder="Tu nombre" required>
+          <input class="input" id="fContact" placeholder="Email o WhatsApp" required>
+          <textarea class="input" id="fMsg" placeholder="Cuéntanos tu proyecto" rows="4"></textarea>
+          <div class="stack" style="margin-top:6px">
+            <button class="btn" type="submit">Enviar</button>
+            <a class="btn outline" href="tel:+34623452887">📞 Llamar</a>
+            <a class="btn ghost" data-wa target="_blank">🟢 WhatsApp directo</a>
+          </div>
+          <p class="sub" style="font-size:12px">Al enviar, abriremos tu correo con el mensaje listo. Si no tienes cliente configurado, se abre Gmail.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">© <span id="y"></span> PixelGraftStudio</footer>
+<footer class="footer">
+  © <span id="y"></span> PixelGraftStudio
+  <br>
+  <a href="https://instagram.com/pixelgraftstudio" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;margin-top:10px;color:#fff;text-decoration:none;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram PixelGraftStudio" style="width:20px;height:20px;">
+    @pixelgraftstudio
+  </a>
+</footer>
+
+  <!-- COOKIES -->
+  <div id="cookieBanner" class="cookie-banner" role="region" aria-label="Aviso de cookies">
+    <span>Usamos cookies técnicas para mejorar tu experiencia.</span>
+    <button id="acceptCookies">Aceptar</button>
+  </div>
+
+  <!-- WHATSAPP FLOTANTE -->
+  <a class="fab-wa" data-wa target="_blank" aria-label="WhatsApp">🟢</a>
+
+  <!-- JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const EMAIL = "graftstudioweb@gmail.com";
+      const PHONE = "34623452887";
+
+      // Año
+      const y = document.getElementById('y'); if (y) y.textContent = new Date().getFullYear();
+
+      // Cookies
+      const banner = document.getElementById('cookieBanner');
+      const KEY = 'cookiesAccepted_v3';
+      if (!localStorage.getItem(KEY)) {
+        banner.style.display = 'flex';
+        document.body.classList.add('cookies-open');
+      }
+      document.getElementById('acceptCookies').addEventListener('click', () => {
+        localStorage.setItem(KEY,'true');
+        banner.remove();
+        document.body.classList.remove('cookies-open');
+      });
+
+      // WhatsApp builder
+      const buildWA = (name, contact, msg) => {
+        const text = [
+          "Hola PixelGraftStudio, quiero un presupuesto para una página web.",
+          name ? `Mi nombre: ${name}` : "",
+          contact ? `Contacto: ${contact}` : "",
+          msg ? `Proyecto: ${msg}` : ""
+        ].filter(Boolean).join("\n");
+        return `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`;
+      };
+
+      // Set WA base
+      const waBase = buildWA("", "", "");
+      document.querySelectorAll('[data-wa]').forEach(a => a.href = waBase);
+
+      // Email CTA
+      const subjectBase = "Presupuesto web - PixelGraftStudio";
+      const bodyBase = "Hola PixelGraftStudio, quiero información sobre mi web.";
+      const emailCTA = document.getElementById('emailCTA');
+      if (emailCTA) emailCTA.href =
+        `mailto:${EMAIL}?subject=${encodeURIComponent(subjectBase)}&body=${encodeURIComponent(bodyBase)}`;
+
+      // Form submit
+      const form = document.getElementById('contactForm');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('fName').value.trim();
+        const contact = document.getElementById('fContact').value.trim();
+        const msg = document.getElementById('fMsg').value.trim();
+
+        const subject = `Presupuesto web - ${name || ''}`.trim();
+        const body = [
+          "Hola PixelGraftStudio,",
+          "",
+          `Mi nombre: ${name || ''}`,
+          `Contacto: ${contact || ''}`,
+          "",
+          "Proyecto:",
+          msg || '',
+          "",
+          "Gracias."
+        ].join("\n");
+
+        // mailto
+        const mailto = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailto;
+
+        // fallback Gmail
+        setTimeout(() => {
+          const gmail = `https://mail.google.com/mail/?view=cm&to=${encodeURIComponent(EMAIL)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+          window.open(gmail, '_blank');
+        }, 700);
+
+        // Update WA buttons
+        const wa = buildWA(name, contact, msg);
+        document.querySelectorAll('[data-wa]').forEach(a => a.href = wa);
+      });
+    });
+  </script>
+</body>
+</html>

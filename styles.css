@@ -1,0 +1,6 @@
+.logo {
+  width: 200px;       /* tamaño del logo */
+  height: auto;       /* mantiene proporción */
+  display: block;     /* para que funcione margin */
+  margin-left: 50px;  /* mueve hacia la derecha */
+}
